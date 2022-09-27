@@ -38,6 +38,6 @@ async def index(prompt: str, num_images: int = 1, skip_grid: bool = True,
         main({"prompt": prompt, "n_samples": num_images, "skip_grid": skip_grid,
               "ddim_steps": ddim_steps, "n_iter": n_iter, "W": width, "H": height,
               "outdir": os.path.join("/var/www/sd/output/", outdir)})
-        return {"ok": True, "url": os.path.join(sd_api_config["sd_output_base_url"], outdir)}
+        return {"ok": True, "url": os.path.join(sd_api_config["sd_output_base_url"], outdir) + "/"}
     except:
         return {"ok": False, "traceback": traceback.format_exc()}
