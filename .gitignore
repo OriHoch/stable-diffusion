@@ -1,0 +1,7 @@
+.idea
+outputs/
+models/ldm/*/*.ckpt
+models/ldm/*/*.zip
+__pycache__
+models/ldm/inpainting_big/archive
+*.egg-info

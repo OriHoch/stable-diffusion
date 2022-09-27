@@ -1,3 +1,19 @@
+# Stable Diffusion API support
+
+This branch adds support for accessing the interface via an API
+
+Install:
+
+```
+pip install -r requirements.txt
+```
+
+Start the api:
+
+```
+uvicorn sdapi.app:app --host 127.0.0.1 --port 8000 --reload
+```
+
 # Stable Diffusion
 *Stable Diffusion was made possible thanks to a collaboration with [Stability AI](https://stability.ai/) and [Runway](https://runwayml.com/) and builds upon our previous work:*
 

@@ -1,0 +1,29 @@
+# this is installed using apt package cuda
+# cudatoolkit==11.3
+torch==1.11.0
+torchvision==0.12.0
+numpy==1.23.3
+albumentations==0.4.3
+diffusers==0.3.0
+opencv-python==4.6.0.66
+pudb==2019.2
+invisible-watermark==0.1.5
+imageio==2.9.0
+imageio-ffmpeg==0.4.2
+pytorch-lightning==1.4.2
+omegaconf==2.1.1
+test-tube==0.7.5
+streamlit==1.13.0
+einops==0.3.0
+torch-fidelity==0.3.0
+transformers==4.19.2
+torchmetrics==0.6.0
+kornia==0.6
+-e git+https://github.com/CompVis/taming-transformers.git@24268930bf1dce879235a7fddd0b2355b84d7ea6#egg=taming-transformers
+-e git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1#egg=clip
+-e .
+
+# api requirements
+fastapi[all]==0.85.0
+starlette==0.20.4
+uvicorn==0.18.3
