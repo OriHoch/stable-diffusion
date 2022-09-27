@@ -60,7 +60,8 @@ def load_model_from_config(config, ckpt, verbose=False):
         print("unexpected keys:")
         print(u)
 
-    model.cuda()
+    if torch.cuda.is_available():
+        model.cuda()
     model.eval()
     return model
 
@@ -279,7 +280,7 @@ def main():
 
     precision_scope = autocast if opt.precision=="autocast" else nullcontext
     with torch.no_grad():
-        with precision_scope("cuda"):
+        with precision_scope("cuda" if torch.cuda.is_available() else "cpu"):
             with model.ema_scope():
                 tic = time.time()
                 all_samples = list()
